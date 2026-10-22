@@ -119,7 +119,7 @@
                                      `Confirmo enviar datos.`;
 
                 // 4. Asignar el enlace estructurado internamente al botón verde
-                const urlWhatsapp = "https://wa.me/584124450795?text=" + encodeURIComponent(textoMensaje);
+                const urlWhatsapp = "https://wa.me/584124450795" + encodeURIComponent(textoMensaje);
                 document.getElementById('whatsappLink').href = urlWhatsapp;
 
                 // 5. Intercambiar pantallas visualmente
