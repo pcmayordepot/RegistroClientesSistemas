@@ -16,7 +16,7 @@
         button { width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
         .btn-submit { background-color: #cc0000; color: white; }
         .btn-submit:hover { background-color: #990000; }
-        .btn-whatsapp { background-color: #25D366; color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; height: 45px; border-radius: 6px; font-weight: bold; }
+        .btn-whatsapp { background-color: #25D366; color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; height: 45px; border-radius: 6px; font-weight: bold; display: flex; }
         .btn-whatsapp:hover { background-color: #128C7E; }
         .hidden { display: none; }
         .success-container { text-align: center; }
@@ -75,7 +75,7 @@
     </div>
 
     <script>
-        // URL DE TU APLICACIÓN WEB DE GOOGLE SHEETS
+        // URL DE TU APLICACIÓN WEB DE GOOGLE SHEETS (Reemplaza "https://google.com" por tu URL /exec)
         const URL_GOOGLE_SCRIPT = "https://google.com";
 
         document.getElementById('clientForm').addEventListener('submit', function(e) {
@@ -117,8 +117,8 @@
                                      `🖨️ Detalles: ${payload.detalles}\n\n` +
                                      `Confirmo enviar datos.`;
 
-                // 4. Asignar el enlace estructurado internamente al botón verde (Número corregido a 584124450795)
-                const urlWhatsapp = "https://wa.me/584124450795?text=" & encodeURIComponent(textoMensaje);
+                // 4. Asignar el enlace estructurado internamente al botón verde (Corregido con el signo +)
+                const urlWhatsapp = "https://wa.me/584124450795?text=" + encodeURIComponent(textoMensaje);
                 document.getElementById('whatsappLink').href = urlWhatsapp;
 
                 // 5. Intercambiar pantallas visualmente
@@ -133,4 +133,5 @@
     </script>
 </body>
 </html>
+
 
