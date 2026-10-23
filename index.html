@@ -76,7 +76,7 @@
 
     <script>
         // URL DE TU APLICACIÓN WEB DE GOOGLE SHEETS (Reemplaza "https://google.com" por tu URL /exec)
-        const URL_GOOGLE_SCRIPT = "https://google.com";
+        const URL_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbxu8j2Ka1-ME7CudzMSnLk5t-VR678V9A2CtTw4QBimkByyhFBX9oVTLyHpewN0K1lj/exec";
 
         document.getElementById('clientForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -118,7 +118,7 @@
                                      `Confirmo enviar datos.`;
 
                 // 4. Asignar el enlace estructurado internamente al botón verde (Corregido con el signo +)
-                const urlWhatsapp = "https://wa.me/584124450795?text=" + encodeURIComponent(textoMensaje);
+                const urlWhatsapp = "https://wa.me/584124450795?text=" & encodeURIComponent(textoMensaje);
                 document.getElementById('whatsappLink').href = urlWhatsapp;
 
                 // 5. Intercambiar pantallas visualmente
